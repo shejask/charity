@@ -64,39 +64,60 @@ body{
               <div class="flex ">
                 <div class="  h-32 w-24">
                   <div class="flex flex-col">
-                    <div class="  h-20  flex items-center justify-center"><div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center "> <img width="30" src="/assests/first-aid-kit.png" alt=""></div>   </div>
+                    <div class="  h-20  flex items-center justify-center">
+                      <button id="medical"  class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center ">
+                         <img width="30" src="/assests/first-aid-kit.png" alt=""></button>   </div>
                     <div class="  h-5"> <p class="text-center">Medical</p></div>
                   </div>
                 </div>
 
-                <div class="  h-32 w-24">
-                  <div class="flex flex-col">
-                    <div class="  h-20  flex items-center justify-center"><div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center "> <img width="30" src="/assests/cutlery.png" alt=""></div>   </div>
-                    <div class="  h-5"> <p class="text-center">Food</p></div>
-                  </div>
-                </div>
+               
 
-                <div class="  h-32 w-24">
-                  <div class="flex flex-col">
-                    <div class="  h-20  flex items-center justify-center"><div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center "> <img width="30" src="/assests/casual-t-shirt-.png" alt=""></div>   </div>
-                    <div class="  h-5"> <p class="text-center">Clothes</p></div>
+                <div class="flex ">
+                  <div class="  h-32 w-24">
+                    <div class="flex flex-col">
+                      <div class="  h-20  flex items-center justify-center">
+                        <button id="food"  class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center ">
+                           <img width="30" src="/assests/cutlery.png" alt=""></button>   </div>
+                      <div class="  h-5"> <p class="text-center">Food</p></div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="  h-32 w-24">
-                  <div class="flex flex-col">
-                    <div class="  h-20  flex items-center justify-center"><div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center "> <img width="30" src="/assests/handicap.png" alt=""></div>   </div>
-                    <div class=" h-5"> <p class="text-center">Wheelchair</p></div>
-                  </div>
-                </div>
 
-                <div class="  h-32 w-24">
-                  <div class="flex flex-col">
-                    <div class="  h-20  flex items-center justify-center"><div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center "> <img width="30" src="/assests/handicap.png" alt=""></div>   </div>
-                    <div class=" h-5"> <p class="text-center">Furniture</p></div>
-                  </div>
-                </div>
 
+
+                  <div class="flex ">
+                    <div class="  h-32 w-24">
+                      <div class="flex flex-col">
+                        <div class="  h-20  flex items-center justify-center">
+                          <button id="wheelchair"  class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center ">
+                             <img width="30" src="/assests/handicap.png" alt=""></button>   </div>
+                        <div class="  h-5"> <p class="text-center">WheelChair</p></div>
+                      </div>
+                    </div>
+
+
+
+                    <div class="flex ">
+                      <div class="  h-32 w-24">
+                        <div class="flex flex-col">
+                          <div class="  h-20  flex items-center justify-center">
+                            <button id="Clothes"  class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center ">
+                               <img width="30" src="/assests/casual-t-shirt-.png" alt=""></button>   </div>
+                          <div class="  h-5"> <p class="text-center">Clothes</p></div>
+                        </div>
+                      </div>
+
+
+                      <div class="flex ">
+                        <div class="  h-32 w-24">
+                          <div class="flex flex-col">
+                            <div class="  h-20  flex items-center justify-center">
+                              <button id="Furniture"  class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center ">
+                                 <img width="30" src="/assests/armchair.png" alt=""></button>   </div>
+                            <div class="  h-5"> <p class="text-center">Furniture</p></div>
+                          </div>
+                        </div>
                 
                  
               </div>
@@ -108,16 +129,59 @@ body{
      
     
     <div class="bg-green-300 flex justify-center items-center   mt-2"></div>
+
+
     
     
+ 
+
+
+
+
+
+
+
+    
+ 
+   
+ 
+
 
     <div id="postsContainer" class="flex flex-shrink-0 overflow-x-scroll" >
+
+
+      <div><h2>Help Others </h2></div>
 
     </div>
 
     <div id="donationsContainer" class="max-w-md mx-auto bg-white p-4 rounded shadow">
       <!-- Donations will be displayed here -->
     </div>
+
+
+
+ 
+ 
+
+    <div class="flex flex-col justify-center items-center bg-gray-200">
+      <div class="flex justify-left items-left mt-4 w-full">
+        <h6 class="text-2xl font-semibold ml-3">Post Anything </h6>
+      </div>
+      <div class="  w-full">
+        <textarea class="border border-black rounded-lg pl-2 pt-2 mt-4 ml-4" name="mediadescription" id="mediadescription" placeholder="Post Anything" cols="48" rows="5"></textarea>
+      </div>
+      <div class="mt-2  w-58 flex border border-black rounded-lg px-2 py-2"> 
+        <img width="30" class="mr-3" src="/assests/img.png" alt="">
+        <input id="mediaimage" name="mediaimage" type="file" class="">
+      </div>
+      <div class="w-full ml-10 mt-2 ">
+        <button class="bg-indigo-500 text-white w-20 mb-5 mt-2 h-10 rounded-lg" id="mediapost">Post</button>
+      </div>
+    </div>
+   
+    
+  <div id="allmediaposts" class=" "></div>
+
 
 
   <!-- <div id="profile-container" hidden></div> -->
@@ -134,5 +198,29 @@ body{
 
 
 
+<!-- <div class="flex flex-col   ">
 
+  <div class="flex">
+    <div class="w-16 h-16 rounded-full overflow-hidden">
+    <div class="w-full h-full bg-cover bg-center" style="background-image: url('/assests/bg11.png');"></div>
+  </div>
+  <div class="flex justify-center items-center ml-5 font-medium"><h1>Hello My nMae is Shijas</h1></div>
+
+  </div>
+
+  <div class="border-t border-gray-800 mt-2"></div>
+ 
+<div class="w-full h-64 bg-black mt-2"  style="background-image: url('${mediaPost.imageUrl}');"></div>
+
+  <div class=" ">
+  
+    <p class=" whitespace mt-2">  </p>
+     <div class="border-t border-gray-800 mt-2">${mediaPost.description}</div>
+
+    <h6 class="font-medium mt-2"> ${new Date(mediaPost.timestamp).toLocaleString()}  </h6>
+  </div>
+
+
+</div>
+  -->
  

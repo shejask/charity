@@ -8,14 +8,14 @@ import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "http
 
 // Initialize Firebase with your config
 const firebaseConfig = {
-  apiKey: "AIzaSyDA1ufLnKII3J72aqdPW_5ePacTWBiEgHg",
-  authDomain: "share2care-99b93.firebaseapp.com",
-  databaseURL: "https://share2care-99b93-default-rtdb.firebaseio.com",
-  projectId: "share2care-99b93",
-  storageBucket: "share2care-99b93.appspot.com",
-  messagingSenderId: "749651496086",
-  appId: "1:749651496086:web:e9cb696743d37f367486b7"
-};
+    apiKey: "AIzaSyAiMI3WBXVgZaPoyQSiAZZ2NELIO-IDvls",
+    authDomain: "shajeee-ab31e.firebaseapp.com",
+    databaseURL: "https://shajeee-ab31e-default-rtdb.firebaseio.com",
+    projectId: "shajeee-ab31e",
+    storageBucket: "shajeee-ab31e.appspot.com",
+    messagingSenderId: "579182396902",
+    appId: "1:579182396902:web:2c00d03afe4299f5970227"
+  };
 
 const firebaseApp = initializeApp(firebaseConfig);
 const analytics = getAnalytics(firebaseApp);

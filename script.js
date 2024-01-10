@@ -7,15 +7,14 @@ import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "http
 
 // Initialize Firebase with your config
 const firebaseConfig = {
-  apiKey: "AIzaSyDA1ufLnKII3J72aqdPW_5ePacTWBiEgHg",
-  authDomain: "share2care-99b93.firebaseapp.com",
-  databaseURL: "https://share2care-99b93-default-rtdb.firebaseio.com",
-  projectId: "share2care-99b93",
-  storageBucket: "share2care-99b93.appspot.com",
-  messagingSenderId: "749651496086",
-  appId: "1:749651496086:web:e9cb696743d37f367486b7"
+  apiKey: "AIzaSyAiMI3WBXVgZaPoyQSiAZZ2NELIO-IDvls",
+  authDomain: "shajeee-ab31e.firebaseapp.com",
+  databaseURL: "https://shajeee-ab31e-default-rtdb.firebaseio.com",
+  projectId: "shajeee-ab31e",
+  storageBucket: "shajeee-ab31e.appspot.com",
+  messagingSenderId: "579182396902",
+  appId: "1:579182396902:web:2c00d03afe4299f5970227"
 };
-
 const firebaseApp = initializeApp(firebaseConfig);
 const analytics = getAnalytics(firebaseApp);
 
@@ -34,25 +33,31 @@ document.addEventListener('DOMContentLoaded', function () {
           const userCredential = await createUserWithEmailAndPassword(auth, email, password);
           const user = userCredential.user;
 
-          // Upload image to Firebase Storage
-          const storage = getStorage(firebaseApp);
-          const imageRef = storageRef(storage, `user_images/${name}`);
-          await uploadBytes(imageRef, image);
+        // Upload image to Firebase Storage
+        const storage = getStorage(firebaseApp);
+        const imageRef = storageRef(storage, `user_images/${user.uid}`); // Use user's UID as the image reference
+        await uploadBytes(imageRef, image);
 
-          // Get the download URL of the uploaded image
-          const imageURL = await getDownloadURL(imageRef);
+        // Get the download URL of the uploaded image
+        const imageURL = await getDownloadURL(imageRef);
 
-          // Save additional user data to Firebase Realtime Database
-          const database = getDatabase(firebaseApp);
-          const usersRef = ref(database, 'users');
+        // Save additional user data to Firebase Realtime Database
+        const database = getDatabase(firebaseApp);
+        const usersRef = ref(database, 'users');
 
-          // Save the user data using the name as the key
-          await set(ref(database, `users/${name}`), { name, email, age, image: imageURL });
-
-          console.log('User data and image saved successfully');
+        // Save the user data using the user's UID as the key
+        const response = await set(ref(database, `users/${user.uid}`), {
+            name,
+            email,
+            age,
+            image: imageURL
+        });
+         
 
           // Redirect to home.html after successful registration
-          window.location.href = 'home.html';
+         // Redirect to home.html after successful registration with user ID as a query parameter
+window.location.href = `home.html?userId=${user.uid}`;
+
       } catch (error) {
           console.error('Error creating user:', error);
 
@@ -71,3 +76,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   });
 });
+
+
+
+
+
+
+
+
